@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hot Gadget Smartphone Shop</title>
+
+    <!-- Tailwind & DaisyUI  -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@3.6.2/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      .poppins {
+        font-family: "Poppins", sans-serif;
+      }
+    </style>
+  </head>
+
+  <body class="poppins">
+    <header></header>
+
+    <main class="container mx-auto px-8 md:px-16 lg:px-24">
+      <h3 class="text-5xl text-center">Hot Gadgets Smartphone Shop</h3>
+
+      <!-- Search Box -->
+      <section " class="mt-16">
+        <input
+          type="text"
+          placeholder="Search here"
+          class="input input-bordered w-full max-w-xs"
+          id="search-box"
+        />
+        <button onclick="searchPhones()" class="btn btn-primary">
+          Search
+        </button>
+      </section>
+    
+        <!-- Spinner Div -->
+      <div>
+        <span id="spinner" class="loading loading-spinner loading-lg hidden"></span>
+      </div>
+
+      <!-- Phones Container-->
+      <section
+        id="phones-container"
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-16"
+      >
+      </section>
+
+      <!-- Show All Button -->
+      <div class="text-center my-12">
+        <button id="show-all-btn" onclick="showAll()" class="btn btn-primary hidden">
+          Show All
+        </button>
+      </div>
+    </main>
+
+    <footer></footer>
+
+    <script src="./js/app.js"></script>
+  </body>
+</html>
